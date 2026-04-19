@@ -11,7 +11,9 @@ In order to achieve a good amount of breadth and depth in research, the team dec
 
 ## App Features
 
-## Visual Themes
+## Visual Themes 
+-  Includes three core app states - Main Game, Win State, and Leaderboard
+-  Visual style guide that defines the design font, text size, and a casino-themed color palette
 
 ## Jargon Used
 
