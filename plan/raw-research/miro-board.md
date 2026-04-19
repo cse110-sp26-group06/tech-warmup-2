@@ -1,1 +1,1 @@
-(Miro Board)[https://miro.com/app/board/uXjVGg_VylY=/?share_link_id=729723845926]
+[Miro Board](https://miro.com/app/board/uXjVGg_VylY=/?share_link_id=729723845926)
