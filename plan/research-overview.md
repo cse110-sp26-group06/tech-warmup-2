@@ -27,6 +27,12 @@ In order to achieve a good amount of breadth and depth in research, the team dec
 - Losses can be disguised as wins via visuals and audio
 - Bonuses can give players a feeling of agency, even though everything is predetermined
 - Visible progress bars give players a sense of motivation to completing a goal (Goal-Gradient Effect)
+### Nick 
+- RTP (return to player): Expected amount of deposited money that is returned to the player. Most casinos run low to mid 90s
+- Wins should come sporadically, but can't have pattern or take too long (pity timers for small prizes)
+- Near-misses are more stimulating than total misses. Makes players want to keep playing (almost won)
+- Bonus minigames are long, almost always pay out something (usually less than the cost of the bonus) or gives consolidation prize if nothing
+- Paylines should show on screen and result lines should be quick enough to require attention from the user (keeps them locked in on screen)
 
 ## Summary
 
