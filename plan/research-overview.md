@@ -11,9 +11,21 @@ In order to achieve a good amount of breadth and depth in research, the team dec
 
 ## App Features
 
-## Visual Themes 
--  Includes three core app states - Main Game, Win State, and Leaderboard
--  Visual style guide that defines the design font, text size, and a casino-themed color palette
+## Visual Themes(Stephanie and Dishita)
+Visual style guide that defines the text font, sizes for different headings, and a casino-themed color palette
+1. Typography
+    - Abril Fatface to add dramatic flair for headings and titles, referencing "casino" style
+    - Barlow to provide a cleaner and modern look for body text to ensure readability and balance overall design
+2. Color Palette
+    - Rich brown to evoke feeling of a traditional casino environment(luxurious)
+    - Gold to reference idea of winning and wealth
+    - Reds to evoke energy and excitement 
+
+### Wireframes(Stephanie and Dishita)
+- Includes three core app states - Main Game, Win State, and Leaderboard
+- Main game: has slot reels, balance display, spin button, history
+- Win state: payout, celebratory graphics/animations
+- Leaderboard(optional if we have time): shows top players and their winnings
 
 ## Jargon Used
 
