@@ -135,7 +135,6 @@ Plays Cashman Casino and Lightning Link on her lunch break and for 15 minutes be
 
 ### User stories
 
-Written in standard Agile form (`As a [persona], I want [capability] so that [outcome]`), with acceptance criteria kept to the product-decision level rather than implementation detail.
 
 #### Story 1 — Fast-session entry for Casual Escapists
 **As Linda (Casual Escapist), I want to resume playing in under 3 seconds from tapping the app icon, so that I can squeeze a session into my lunch break.**
@@ -151,7 +150,6 @@ Written in standard Agile form (`As a [persona], I want [capability] so that [ou
 - Push notification 30 minutes before streak expiry (respecting quiet hours)
 
 
-
 #### Story 3 — VIP recognition and host program
 **As Anthony (VIP), I want a dedicated host who knows my play history and reaches out with personalized offers, so that I feel recognized as a long-term high-value customer.**
 - VIP tier assignment based on 90-day rolling spend and engagement
@@ -164,7 +162,6 @@ Written in standard Agile form (`As a [persona], I want [capability] so that [ou
 - Starter chip grant sized for ~10 spins at default bet
 - First-session win rate tuned above steady-state (scripted, not random)
 - At least one bonus-round trigger in the first 5 spins
-- No IAP prompt in session 1; first offer no earlier than session 3
 
 #### Story 5 — Responsible-play controls
 **As any player, I want to be able to see my time and spend and set limits, so that my play stays within what I can afford and actually enjoy.**
@@ -172,7 +169,6 @@ Written in standard Agile form (`As a [persona], I want [capability] so that [ou
 - Monthly spend summary accessible in two taps
 - Self-imposed deposit and time limits; hard-gated cooldown once reached
 - One-tap self-exclusion with clear re-entry window
-- Support link to problem-gambling resources (NCPG, GamCare) in settings
 
 *Sources: Global Growth Insights (Social Casino Market Report 2025), Grand View Research (Social Casino Market Report 2030), Statista (Social Casino Gaming Statistics & Facts), Deep Market Insights, adjoe, and academic literature on slot machine psychology (Dixon et al. on dark flow; Schüll, MIT; Skinner's variable-ratio foundation).*
 
