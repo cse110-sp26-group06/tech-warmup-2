@@ -31,7 +31,7 @@ Visual style guide that defines the text font, sizes for different headings, and
 
 ## Types of Users
 
-# Primary user segments
+### Primary user segments
 
 Five behavioral segments account for most slot app users.
 
@@ -46,7 +46,7 @@ Five behavioral segments account for most slot app users.
 
 ---
 
-## 4. Core motivations (why people actually play)
+### Core motivations (why people actually play)
 
 The academic and industry literature converges on a consistent list:
 
@@ -62,9 +62,9 @@ The academic and industry literature converges on a consistent list:
 
 ---
 
-## 5. Personas
+### Personas
 
-### Persona A — Linda, the Casual Escapist
+#### Persona A — Linda, the Casual Escapist
 
 **Snapshot**
 - 38, administrative assistant, suburban Ohio
@@ -99,7 +99,7 @@ Plays Cashman Casino and Lightning Link on her lunch break and for 15 minutes be
 
 ---
 
-### Persona B — Anthony James, the VIP
+#### Persona B — Anthony James, the VIP
 
 **Snapshot**
 - 35, Financial Analyst, Phoenix AZ
@@ -130,7 +130,7 @@ Plays Cashman Casino and Lightning Link on her lunch break and for 15 minutes be
 
 ---
 
-### Persona C — Maya, the Social Connector
+#### Persona C — Maya, the Social Connector
 
 **Snapshot**
 - 47, nurse, suburban Georgia
@@ -166,45 +166,45 @@ Plays Bingo Blitz, House of Fun, and a themed Wizard of Oz slot app. Found them 
 
 ---
 
-## 6. User stories
+### User stories
 
 Written in standard Agile form (`As a [persona], I want [capability] so that [outcome]`), with acceptance criteria kept to the product-decision level rather than implementation detail.
 
-### Story 1 — Fast-session entry for Casual Escapists
+#### Story 1 — Fast-session entry for Casual Escapists
 **As Linda (Casual Escapist), I want to resume playing in under 3 seconds from tapping the app icon, so that I can squeeze a session into my lunch break.**
 - App cold-start to spinnable reels < 3s on mid-range Android (P75)
 - No interstitial ad on the first launch of a session
 - Last-played machine auto-loaded; no menu navigation required
 
-### Story 2 — Daily-bonus habit loop
+#### Story 2 — Daily-bonus habit loop
 **As a Dedicated Regular, I want to collect a daily login bonus that visibly escalates across a streak, so that I feel rewarded for consistent play and don't want to break the streak.**
 - Bonus visible on app open, no more than two taps to claim
 - Streak counter with clearly communicated reset rules
 - Day 7 / day 30 milestone bonuses materially larger than daily (at least 5x)
 - Push notification 30 minutes before streak expiry (respecting quiet hours)
 
-### Story 3 — Club and team events for Social Connectors
+#### Story 3 — Club and team events for Social Connectors
 **As Maya (Social Connector), I want to play toward a shared goal with my friend group, so that the app is something we do together rather than alone.**
 - Club creation with 10–50 member capacity
 - Team event with a collective progress bar visible to all members
 - Member contribution visible on a club leaderboard
 - In-app chat or gift mechanic usable without leaving the game view
 
-### Story 4 — VIP recognition and host program
+#### Story 4 — VIP recognition and host program
 **As Anthony (VIP), I want a dedicated host who knows my play history and reaches out with personalized offers, so that I feel recognized as a long-term high-value customer.**
 - VIP tier assignment based on 90-day rolling spend and engagement
 - Named host with a direct message channel and <24h SLA
 - Monthly personalized offer based on preferred machines and event types
 - Early access (48–72h) to new slot releases
 
-### Story 5 — New-user onboarding with meaningful free play
+#### Story 5 — New-user onboarding with meaningful free play
 **As a first-time user, I want to experience a "big win" within my first 3 minutes, so that I understand why this app is fun and want to come back.**
 - Starter chip grant sized for ~10 spins at default bet
 - First-session win rate tuned above steady-state (scripted, not random)
 - At least one bonus-round trigger in the first 5 spins
 - No IAP prompt in session 1; first offer no earlier than session 3
 
-### Story 6 — Responsible-play controls
+#### Story 6 — Responsible-play controls
 **As any player, I want to be able to see my time and spend and set limits, so that my play stays within what I can afford and actually enjoy.**
 - Running session-time indicator visible in settings
 - Monthly spend summary accessible in two taps
