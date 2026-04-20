@@ -131,7 +131,36 @@ Plays Cashman Casino and Lightning Link on her lunch break and for 15 minutes be
 
 ---
 
+#### Persona C — Maria, the Social Connector
 
+**Snapshot**
+- 62, retired, Florida
+- Widowed, active in local community groups
+- iPad user, prefers larger screens
+- Fixed income
+
+**Context**
+Maria was introduced to slot apps by a friend and now plays daily. She enjoys sending gifts, joining clubs, and participating in leaderboard events. The social aspect keeps her engaged more than the gameplay itself.
+
+**Goals**
+- Stay connected with friends through in-game interactions
+- Participate in events and contribute to her club
+- Maintain a sense of routine and community
+
+**Frustrations**
+- Confusing UI or too many features at once
+- Missing out on events due to unclear timing
+- Feeling left out when others progress faster
+
+**Behaviors**
+- 1–2 longer sessions per day
+- Frequently interacts with social features (gifts, clubs, leaderboards)
+- Occasionally spends small amounts ($10–$30/month)
+
+**Product implications**
+- Social features (clubs, gifting, events) are key retention drivers
+- Clear event timing and notifications are critical
+- UI should be simple, readable, and accessible
 
 ### User stories
 
