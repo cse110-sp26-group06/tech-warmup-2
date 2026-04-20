@@ -9,7 +9,18 @@ In order to achieve a good amount of breadth and depth in research, the team dec
 - Gamification & Engagement Patterns (Nicholas, Zayn)
   
 
-## App Features
+## App Features(Sean and Kevin)
+- **5 Reels:** Unlike the traditional slot machine, modern slot machines in today use 5 x 3 grid reels.
+- **Payout logic:** This slot allows a multiway awards, which gives award not only when the same symbols are aligned, but when it is in adjacent columns. Only highest paying multiway awards for each symbol is paid.
+- **Separated paytable:** Each app clearly organized the rewards of each symbol and special features of the theme in information page. Each symbol is awarded starting from match of 3, and doubles the reward when the number of match increases
+- **Special effects:** On top of the effects when there is a match, there are special effects for high awards or when the special mechanics are on. Ex raining coin, sparkles in the background...etc
+- **Auto-spin:** the app provides an auto spin button which let the user to set number of spins and the cost per spin.
+- **Privacy terms:** the apps asks user to accept the privacy policy and term of services. Some apps asked the user to share the location as the legitimacy of gambling differs by states.
+### Ideas for special mechanics:
+- When particular symbol appears more than 3 times:
+    - it gives extra spins with high-level rewards symbols only.
+    - it gives a chance to get random award from the mystery box.
+    - it automatically spins the slot 5 times and keeps the special symbols till the end.
 
 ## Visual Themes(Stephanie and Dishita)
 Visual style guide that defines the text font, sizes for different headings, and a casino-themed color palette
@@ -22,12 +33,23 @@ Visual style guide that defines the text font, sizes for different headings, and
     - Reds to evoke energy and excitement 
 
 ### Wireframes(Stephanie and Dishita)
-- Includes three core app states - Main Game, Win State, and Leaderboard
+- Figma file for low fidelity wireframes includes three core app states - Main Game, Win State, and Leaderboard
 - Main game: has slot reels, balance display, spin button, history
 - Win state: payout, celebratory graphics/animations
 - Leaderboard(optional if we have time): shows top players and their winnings
 
-## Jargon Used
+## Jargon Used(Maxime and Aidan)
+- **Active Payline** — A payline that will pay out if a winning combination lands on it. You must bet enough coins to activate it.
+- **All Ways** — A rule where any left‑to‑right matching symbols count as a win, regardless of specific paylines.
+- **Auto Spin / Auto Play** — A feature that automatically spins the reels a set number of times without pressing the button each time.
+- **Bonus Round** — A special feature triggered during play that often offers higher payouts, free spins, or mini‑games.
+- **Classic Slots** — Simple, traditional slot machines with straightforward pay tables and no bonus features.
+- **Expanding Reels** — A feature where the number of reels or rows increases during play, creating more ways to win.
+- **Fixed Jackpot** — A jackpot whose value does not change; it’s predetermined and does not grow with player wagers.
+- **Bankroll** — The amount of money a player sets aside specifically for slot play.
+- **Bet / Wager** — The amount of money placed on a single spin.
+- **Betting Limits** — The minimum and maximum amounts you can wager per spin.
+- **Buy‑In / Add‑On** — In slot tournaments, paying to enter (buy‑in) or paying to add more credits (add‑on).
 
 ## Types of Users (Arpita & Ethan)
 
@@ -220,4 +242,4 @@ Maria was introduced to slot apps by a friend and now plays daily. She enjoys se
 
 ## Summary
 
-Slot machines may seem simple on the surface, but in truth, they are a part of a massive industry. Every detail is purposely made to optimize user retention and keep them hooked while making a profit.
+Slot machines may seem simple on the surface, but in truth, they are a part of a massive industry. Every detail is purposely made to optimize user retention and keep them hooked while making a profit. From the visual themes to the mechanics of the game, every aspect has been carefully researched to create an engaging experience. The research we have done has given us a deeper understanding of both domain (the problem space) and users, and will help us in designing our own slot machine app that is engaging for users.
