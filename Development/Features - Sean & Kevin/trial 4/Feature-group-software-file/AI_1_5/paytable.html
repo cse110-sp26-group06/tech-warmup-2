@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Token Torrent 243 Paytable</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body class="paytable-page">
+    <main class="info-shell">
+      <section class="hero">
+        <p class="eyebrow">Separate information page</p>
+        <h1 class="page-title">Paytable</h1>
+        <p class="page-subtitle">
+          Full symbol values, reel frequency notes, and the multiway rules behind
+          the token machine.
+        </p>
+      </section>
+
+      <section class="info-panel">
+        <div class="rule-cards">
+          <article class="rule-card">
+            <span class="rule-label">Grid Size</span>
+            <strong id="gridSize">3 x 5</strong>
+          </article>
+          <article class="rule-card">
+            <span class="rule-label">Ways</span>
+            <strong id="waysValue">243</strong>
+          </article>
+          <article class="rule-card">
+            <span class="rule-label">Start Paying</span>
+            <strong>3 Reels</strong>
+          </article>
+          <article class="rule-card">
+            <span class="rule-label">Doubling Rule</span>
+            <strong>3 to 4 to 5</strong>
+          </article>
+        </div>
+
+        <div class="info-grid">
+          <article class="info-card">
+            <h2>How Multiway Awards Work</h2>
+            <p>
+              Matches are counted from reel 1 moving left to right. If a symbol
+              appears on 3 or more consecutive reels, every symbol combination
+              across those reels is a winning way.
+            </p>
+          </article>
+          <article class="info-card">
+            <h2>Frequency Distribution</h2>
+            <p id="frequencyNote">
+              Low award symbols appear 6x more often overall on the reel strips.
+            </p>
+          </article>
+        </div>
+
+        <section class="table-panel">
+          <h2>Symbol Paytable</h2>
+          <table class="paytable-table">
+            <thead>
+              <tr>
+                <th>Symbol</th>
+                <th>Group</th>
+                <th>Reel Weight</th>
+                <th>3 Match</th>
+                <th>4 Match</th>
+                <th>5 Match</th>
+                <th>Flavor</th>
+              </tr>
+            </thead>
+            <tbody id="paytableBody"></tbody>
+          </table>
+        </section>
+
+        <div class="page-link-row">
+          <a class="spin-button button-link" href="index.html">Back To Game</a>
+        </div>
+      </section>
+    </main>
+
+    <script src="game-data.js"></script>
+    <script src="paytable.js"></script>
+  </body>
+</html>
