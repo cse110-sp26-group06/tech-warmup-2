@@ -29,7 +29,7 @@ Visual style guide that defines the text font, sizes for different headings, and
 
 ## Jargon Used
 
-## Types of Users
+## Types of Users (Arpita & Ethan)
 
 ### Primary user segments
 
