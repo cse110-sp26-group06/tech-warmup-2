@@ -131,41 +131,7 @@ Plays Cashman Casino and Lightning Link on her lunch break and for 15 minutes be
 
 ---
 
-#### Persona C — Maya, the Social Connector
 
-**Snapshot**
-- 47, nurse, suburban Georgia
-- Married, grown kids
-- iPhone, iPad
-- Household income ~$120K
-
-**Context**
-Plays Bingo Blitz, House of Fun, and a themed Wizard of Oz slot app. Found them through a friend in her church group. About a dozen of her friends play across the same apps and coordinate through a WhatsApp thread.
-
-**Goals**
-- Play alongside friends — club events, team goals
-- Participate in seasonal themed events (she loves Halloween and Christmas content)
-- Send and receive gifts/chips daily as a small social ritual
-
-**Frustrations**
-- When a friend moves to a different app and the team has to reorganize
-- Events that require more time than her work schedule allows
-- Cosmetic-only rewards she doesn't find meaningful
-- Chat systems that are clunky on mobile
-
-**Behaviors**
-- 45–90 minutes/day, 2–3 sessions, anchored around her work schedule
-- Spends $20–$80/month, concentrated in themed-event passes
-- Extremely high D365 retention (3+ years on primary app)
-- Primary acquisition channel for new players — invites 2–4 friends/year
-
-**Product implications**
-- Social graph and club features are load-bearing — degrading them leaks whole cohorts, not individuals
-- Seasonal content calendar drives both retention and monetization
-- Gift/send mechanics double as a zero-cost re-engagement nudge
-- She is high-LTV when her LTV includes referred friends, not just direct spend
-
----
 
 ### User stories
 
@@ -184,28 +150,23 @@ Written in standard Agile form (`As a [persona], I want [capability] so that [ou
 - Day 7 / day 30 milestone bonuses materially larger than daily (at least 5x)
 - Push notification 30 minutes before streak expiry (respecting quiet hours)
 
-#### Story 3 — Club and team events for Social Connectors
-**As Maya (Social Connector), I want to play toward a shared goal with my friend group, so that the app is something we do together rather than alone.**
-- Club creation with 10–50 member capacity
-- Team event with a collective progress bar visible to all members
-- Member contribution visible on a club leaderboard
-- In-app chat or gift mechanic usable without leaving the game view
 
-#### Story 4 — VIP recognition and host program
+
+#### Story 3 — VIP recognition and host program
 **As Anthony (VIP), I want a dedicated host who knows my play history and reaches out with personalized offers, so that I feel recognized as a long-term high-value customer.**
 - VIP tier assignment based on 90-day rolling spend and engagement
 - Named host with a direct message channel and <24h SLA
 - Monthly personalized offer based on preferred machines and event types
 - Early access (48–72h) to new slot releases
 
-#### Story 5 — New-user onboarding with meaningful free play
+#### Story 4 — New-user onboarding with meaningful free play
 **As a first-time user, I want to experience a "big win" within my first 3 minutes, so that I understand why this app is fun and want to come back.**
 - Starter chip grant sized for ~10 spins at default bet
 - First-session win rate tuned above steady-state (scripted, not random)
 - At least one bonus-round trigger in the first 5 spins
 - No IAP prompt in session 1; first offer no earlier than session 3
 
-#### Story 6 — Responsible-play controls
+#### Story 5 — Responsible-play controls
 **As any player, I want to be able to see my time and spend and set limits, so that my play stays within what I can afford and actually enjoy.**
 - Running session-time indicator visible in settings
 - Monthly spend summary accessible in two taps
