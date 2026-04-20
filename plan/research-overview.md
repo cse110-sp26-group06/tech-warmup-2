@@ -106,7 +106,8 @@ Plays Cashman Casino and Lightning Link on her lunch break and for 15 minutes be
 - Divorced
 
 **Context**
- He grew up enjoying games like Backgammon and Poker with his friends. A 21 birthday trip to Vegas quickly hooked him onto the slot machines. Due to his busy schedule as a manager he doesn't have time to travel to Vegas these days but if he could play the slots from his home he would have his 2 favorite things, an episode of breaking bad and the slots together. 
+ He grew up enjoying games like Backgammon and Poker with his friends. A 21 birthday trip to Vegas quickly hooked him onto the slot machines. Due to his busy schedule as a financial analyst he doesn't have time to travel to Vegas these days but if he could play the slots from his home he would have his 2 favorite things, an episode of breaking bad and the slots together. 
+
 **Goals**
 - Access exclusive high-stakes machines and early releases
 - Maintain his VIP tier and leaderboard position
