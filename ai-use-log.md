@@ -50,13 +50,13 @@ Run tests to ensure all animations are smooth and don't cause performance issues
 
 ### Phase 5: Added Dark mode and light mode option
 - Refactor the UI to support both light mode and dark mode using a theme system (CSS variables or Tailwind config).
-- Requirements:
+Requirements:
  - Do not change layout, structure, or game logic.
  - Only modify styling.
  - Implement theme switching using a data-theme="light" and data-theme="dark" attribute on the root element (or Tailwind dark: class).
  - Light Mode (default) — Warm Casino Theme
 - Ensure accessible contrast in both modes
-- Tile colors:
+Tile colors:
  - Bronze → #B87333
  - Silver → #C0C0C0
  - Gold → #D4A017
