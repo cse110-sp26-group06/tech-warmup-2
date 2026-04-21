@@ -102,3 +102,18 @@ Tile colors:
 
 ## Prompt 5: Update README
 - Based on the code, update the README.md to contain: a concise overview, installation/setup, usage examples, configuration
+
+## Users - Arpita & Ethan
+
+### Prompt 1: Daily bonus and Responsible Playing Timer
+Update slot machine app so that it gives you a time check of how long you've been playing. Give a daily bonus when you first open the app for the day. Add a streak system for how many days in a row you've played the game, update bonus to increase for more days spent on the app. 
+
+### Prompt 2: Token refill countdown and Invite Friends
+Remove the daily bonus claimed box. Add a pop up for the daily bonus. When you run out of tokens, give a countdown for when tokens will be refilled. Have an invite friends button to send the game to friends. 
+
+
+### Prompt 3: User Profile Personalization and Higher Stakes
+Allow the user to input their name for further personalization. Allow them to purchase emoji/icon for their user by using credits. Allow higher betting limits and higher wins, but don't make it easy to win. 
+
+### Prompt 4: Fixing UI for Profile Page 
+Make the user profile a seperate page, put the button for user profile at the top left of the page. Also have a pop up to let the user know when they don't have enough credits for the wager. 
