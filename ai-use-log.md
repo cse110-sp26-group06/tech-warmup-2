@@ -11,28 +11,60 @@
 ## Visual Themes - Stephanie & Dishita
 ### Phase 1: Typography
 - Replace all typography in my slot machine app with the following font system. First, import the following fonts: Abril Fatface, Barlow, Public Sans. Then, systematically update every text element according to these rules:
+
 **For all TITLE text and major announcements:**
-- Change font to: Abril Fatface
-- Size: 64px with 72px line-height
-- This is a bold, dramatic serif that commands attention
-- Example usage: Main page title, jackpot amounts, win celebration headers
+- Change font to Abril Fatface with size 64px with 72px line-height. This is a bold, dramatic serif that commands attention
 
 **For all H1 and H2 headings (like section headers, game mode names, feature titles):**
-- Change font to: Barlow
-- H1: 44px / 58px line-height, font-weight: 600 (semibold)
-- H2: 36px / 42px line-height, font-weight: 600 (semibold)
-- This is a modern, geometric sans-serif
+- Change font to Barlow. All H1: 44px / 58px line-height, font-weight: 600 (semibold). All H2: 36px / 42px line-height font-weight: 600 (semibold). This is a modern, geometric sans-serif
 
 **For all BODY TEXT, labels, and UI elements (like bet amounts, balance displays, button labels, captions):**
-- Change font to: Public Sans
-- Subtitle: 28px / 36px line-height, font-weight: 400 (regular)
-- Body 1: 24px / 28px line-height, font-weight: 400 or 700 (bold for emphasis)
-- Body 2: 18px / 24px line-height, font-weight: 400 or 700
-- Caption: 16px / 24px line-height, font-weight: 400
-- This is a clean, readable sans-serif optimized for screens
+- Change font to Public Sans. For subtitles: 28px / 36px line-height, font-weight: 400 (regular).All Body 1: 24px / 28px line-height, font-weight: 400 or 700 (bold for emphasis). All Body 2: 18px / 24px line-height, font-weight: 400 or 700. For all captions: 16px / 24px line-height, font-weight: 400. This is a clean, readable sans-serif optimized for screens
 
 Go through EVERY component in the app and update the typography. Pay special attention to: slot machine displays, balance and bet amount displays, win amount announcements, button text.
 
 Make sure you preserve any existing styling (colors, spacing, etc.) - ONLY change the fonts, sizes, and line-heights as specified above. After completion, verify that no text is still using old fonts.
 
 ### Phase 2: Color Palette
+- Transform the entire color scheme of the slot machine app to use this casino color palette. Replace every color systematically according to these rules:
+
+**PRIMARY COLORS:**
+
+1. **Rich Brown `#3D1800`** - Replace ALL primary background colors, main container backgrounds, and dark structural elements with this color. This should be the dominant background color throughout the app.
+
+2. **Gold Yellow `#FFD166`** - Replace ALL primary accent colors, call-to-action highlights, and "win" related elements with this color. Use for:
+   - Primary button backgrounds
+   - Currency displays
+   - Win amount highlights
+   - Important borders that need attention
+   - Active state indicators
+
+3. **Pure Black `#000000`** - Use for ALL primary text that appears on light backgrounds.  
+
+**SECONDARY COLORS:**
+
+4. **Vibrant Red `#FF5F5F`** - Use for:
+   - Secondary call-to-action buttons
+   - "Spin" or action buttons
+   - Alert/urgent elements
+   - Special feature highlights
+
+5. **Dark Gold `#C8860A`** - Use for:
+   - Button borders
+   - Secondary accents
+   - Gradient endpoints  
+   - Hover states on gold elements
+
+**ACCENT COLORS:**
+
+6. **Warm Orange `#FF9E8A`** - Use for tertiary accents, hover states, and friendly UI elements
+7. **Light Yellow `#FFEAA0`** - Use for background cards, soft highlights, and subtle accents
+8. **Light Orange `#FFA9A3`** - Additional accent for variety in multi-element displays
+
+**GRADIENTS - Replace solid backgrounds with these gradients where appropriate:**
+
+- **Headers and hero sections**: `#3D1800, #C8860A`
+- **Win displays and celebration**: `#FFD166, #FFEAA0`
+- **Energy elements and special features**: `#FF5F5F, #FF9E8A, #FFA9A3`
+
+Go through every component and update colors. Make sure there are no remnants of the old color scheme.  
