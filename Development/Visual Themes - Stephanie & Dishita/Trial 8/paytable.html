@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Prompt Drop Casino Paytable</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body class="paytable-page">
+    <main class="info-shell">
+      <section class="hero">
+        <p class="eyebrow">Math for the token maximalists</p>
+        <h1 class="page-title">Paytable</h1>
+        <p class="page-subtitle">
+          Exact payouts, all 10 paylines, and the location reminder behind this
+          very unserious AI casino.
+        </p>
+      </section>
+
+      <section class="info-panel">
+        <div class="rule-cards">
+          <article class="rule-card">
+            <span class="rule-label">Grid Size</span>
+            <strong id="gridSize">5 x 3</strong>
+          </article>
+          <article class="rule-card">
+            <span class="rule-label">Paylines</span>
+            <strong id="paylineCount">10</strong>
+          </article>
+          <article class="rule-card">
+            <span class="rule-label">Minimum Match</span>
+            <strong>3 In A Row</strong>
+          </article>
+          <article class="rule-card">
+            <span class="rule-label">Payout Rule</span>
+            <strong>Highest Line Only</strong>
+          </article>
+        </div>
+
+        <div class="info-grid">
+          <article class="info-card">
+            <h2>How Awards Work</h2>
+            <p>
+              Rows can pay for 3, 4, or 5 matching adjacent symbols. Columns and
+              diagonals are three-cell lines, so they only award on 3 of a kind.
+              When several lines qualify on one spin, only the single highest-paying
+              line is actually credited.
+            </p>
+          </article>
+          <article class="info-card">
+            <h2>Location Reminder</h2>
+            <p id="complianceReminder">
+              The game asks for device location or a manually selected state before
+              play because gambling rules differ by state. This reminder is local
+              only and does not verify legal eligibility.
+            </p>
+          </article>
+        </div>
+
+        <section class="table-panel">
+          <h2>Symbol Multipliers</h2>
+          <table class="paytable-table">
+            <thead>
+              <tr>
+                <th>Symbol</th>
+                <th>Weight</th>
+                <th>3 In A Row</th>
+                <th>4 In A Row</th>
+                <th>5 In A Row</th>
+                <th>Flavor</th>
+              </tr>
+            </thead>
+            <tbody id="paytableBody"></tbody>
+          </table>
+        </section>
+
+        <section class="table-panel">
+          <div class="panel-heading">
+            <h2>Payline Gallery</h2>
+            <span>Rows, columns, and the two main diagonals.</span>
+          </div>
+          <div id="paylineGallery" class="line-gallery"></div>
+        </section>
+
+        <div class="page-link-row">
+          <a class="spin-button button-link" href="index.html">Back To Game</a>
+        </div>
+      </section>
+    </main>
+
+    <script src="vendor/motion.js"></script>
+    <script src="game-data.js"></script>
+    <script src="paytable.js"></script>
+  </body>
+</html>

@@ -1,0 +1,246 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Prompt Drop Casino</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body class="game-page">
+    <div id="ambientSparkles" class="ambient-sparkles" aria-hidden="true"></div>
+    <div id="fxLayer" class="fx-layer" aria-hidden="true"></div>
+    <main class="app-shell">
+      <section class="hero">
+        <p class="eyebrow">Play-money satire for the inference era</p>
+        <h1>Prompt Drop Casino</h1>
+        <p class="tagline">
+          Spin a 5x3 AI slot, win imaginary tokens, then spend them like a startup
+          that just discovered usage-based pricing.
+        </p>
+      </section>
+
+      <section class="machine" aria-label="slot machine">
+        <div class="status-bar">
+          <article class="stat-card">
+            <span class="stat-label">Token Wallet</span>
+            <strong id="tokenCount">3,000</strong>
+          </article>
+          <article class="stat-card">
+            <span class="stat-label">Cost Per Spin</span>
+            <strong id="spinCostDisplay">40</strong>
+          </article>
+          <article class="stat-card">
+            <span class="stat-label">Auto Queue</span>
+            <strong id="queueCount">10</strong>
+          </article>
+          <article id="lastAwardCard" class="stat-card">
+            <span class="stat-label">Last Award</span>
+            <strong id="lastAward">0</strong>
+          </article>
+          <article class="stat-card">
+            <span class="stat-label">Location Gate</span>
+            <strong id="locationStatus">Pending</strong>
+          </article>
+        </div>
+
+        <div class="reel-stage" id="reelStage">
+          <div class="machine-topline">
+            <span>10 paylines: 3 rows, 5 columns, 2 diagonals</span>
+            <span>Only the highest-paying qualifying line gets paid each spin</span>
+          </div>
+          <div id="sparkleField" class="sparkle-field" aria-hidden="true"></div>
+          <div
+            id="reelBoard"
+            class="reel-board"
+            role="img"
+            aria-label="5 columns and 3 rows slot grid"
+          ></div>
+          <div class="glow-ring" aria-hidden="true"></div>
+        </div>
+
+        <section class="control-grid" aria-label="slot controls">
+          <article class="control-card">
+            <div class="settings-heading">
+              <h2>Spend Tokens</h2>
+              <span>Decide how expensive the next act of confidence will be.</span>
+            </div>
+            <label class="slider-field" for="costSlider">
+              <span>Cost Per Spin</span>
+              <input
+                id="costSlider"
+                type="range"
+                min="10"
+                max="120"
+                step="5"
+                value="40"
+              />
+              <div class="slider-meta">
+                <strong id="costSliderValue">40</strong>
+                <span>tokens</span>
+              </div>
+            </label>
+            <p class="settings-note">
+              Payouts use the current spin cost as the multiplier base.
+            </p>
+          </article>
+
+          <article class="control-card">
+            <div class="settings-heading">
+              <h2>Auto Spin Queue</h2>
+              <span>Queue up a batch and let the machine overfit your bankroll.</span>
+            </div>
+            <label class="slider-field" for="autoSpinSlider">
+              <span>Number Of Auto Spins</span>
+              <input
+                id="autoSpinSlider"
+                type="range"
+                min="1"
+                max="30"
+                step="1"
+                value="10"
+              />
+              <div class="slider-meta">
+                <strong id="autoSpinValue">10</strong>
+                <span>spins</span>
+              </div>
+            </label>
+            <p id="autoSpinStatus" class="settings-note">Auto spin idle.</p>
+          </article>
+
+          <article class="control-card">
+            <div class="settings-heading">
+              <h2>House Rules</h2>
+              <span>Yes, the machine is stingy. It learned from SaaS billing.</span>
+            </div>
+            <ul class="rules-list">
+              <li>Rows can award 3, 4, or 5 in a row.</li>
+              <li>Columns and diagonals award on 3 matching symbols.</li>
+              <li>Only the single highest-paying line is billable each spin.</li>
+            </ul>
+          </article>
+        </section>
+
+        <div class="controls">
+          <button id="spinButton" class="spin-button" type="button">Spin The Model</button>
+          <button id="autoSpinButton" class="ghost-button" type="button">
+            Start Auto Spin
+          </button>
+          <button id="stopAutoSpinButton" class="ghost-button" type="button">
+            Stop Auto Spin
+          </button>
+          <button id="resetButton" class="ghost-button" type="button">Refill Tokens</button>
+          <a class="ghost-button button-link" href="paytable.html">Open Paytable</a>
+        </div>
+
+        <p id="message" class="message" aria-live="polite">
+          The reels are live. Every spin is a budget review with more glitter.
+        </p>
+
+        <section class="insight-grid">
+          <article class="breakdown-panel">
+            <div class="panel-heading">
+              <h2>Winner Breakdown</h2>
+              <span id="winMeta">No spin yet. The hype cycle is warming up.</span>
+            </div>
+            <ul id="breakdownList" class="breakdown-list">
+              <li class="empty-state">
+                Nothing has paid yet. The machine is still pretending the next spin
+                will be strategic.
+              </li>
+            </ul>
+          </article>
+
+          <article class="breakdown-panel">
+            <div class="panel-heading">
+              <h2>Payline Map</h2>
+              <span>Active straight lines the machine monitors.</span>
+            </div>
+            <ul id="lineLegend" class="line-list"></ul>
+          </article>
+        </section>
+      </section>
+    </main>
+
+    <div id="coinRain" class="coin-rain" aria-hidden="true"></div>
+
+    <div
+      id="privacyModal"
+      class="privacy-modal"
+      role="dialog"
+      aria-modal="true"
+      aria-labelledby="privacyTitle"
+    >
+      <div class="privacy-card">
+        <p class="eyebrow">Before the token furnace starts</p>
+        <h2 id="privacyTitle">Privacy, terms, and location check</h2>
+        <p class="privacy-copy">
+          This parody slot stores consent and your location acknowledgement locally
+          on this device. It does not determine legal eligibility, and it definitely
+          does not convert fake tokens into actual wealth.
+        </p>
+
+        <div class="policy-grid">
+          <article class="policy-card">
+            <h3>Privacy Policy</h3>
+            <p>
+              We keep your consent choice and location acknowledgement in browser
+              storage so the app remembers you already read the fine print.
+            </p>
+          </article>
+          <article class="policy-card">
+            <h3>Terms Of Service</h3>
+            <p>
+              This is satire with play-money tokens only. If you ever leave parody
+              land, check your local rules yourself before doing anything involving
+              real money.
+            </p>
+          </article>
+        </div>
+
+        <section class="location-box" aria-label="location acknowledgement">
+          <div class="settings-heading">
+            <h3>Location Reminder</h3>
+            <span>Gambling rules differ by state, so confirm where you are first.</span>
+          </div>
+          <div class="location-actions">
+            <button id="locationButton" class="ghost-button" type="button">
+              Share Device Location
+            </button>
+            <p id="locationFeedback" class="location-feedback">
+              No location shared yet. You can also choose your state manually.
+            </p>
+          </div>
+          <label class="field" for="stateSelect">
+            <span>Manual State Selection</span>
+            <select id="stateSelect">
+              <option value="">Choose a state</option>
+            </select>
+          </label>
+        </section>
+
+        <div class="privacy-actions">
+          <label class="privacy-check" for="privacyCheckbox">
+            <input id="privacyCheckbox" type="checkbox" />
+            <span>I accept the privacy policy.</span>
+          </label>
+          <label class="privacy-check" for="termsCheckbox">
+            <input id="termsCheckbox" type="checkbox" />
+            <span>I accept the terms of service.</span>
+          </label>
+          <button id="privacyAcceptButton" class="spin-button" type="button" disabled>
+            Enter The Casino
+          </button>
+        </div>
+
+        <p class="legal-note">
+          Location details stay on this device. This app is not legal advice and does
+          not verify whether gambling is lawful where you are.
+        </p>
+      </div>
+    </div>
+
+    <script src="vendor/motion.js"></script>
+    <script src="game-data.js"></script>
+    <script src="script.js"></script>
+  </body>
+</html>
