@@ -9,3 +9,7 @@ The team's initial plan is to do a bit of a baton pass. Each pair focused on one
 ## Update 1
 
 Reasoning switched to high instead of extra high to preserve tokens, taking effect after entries 1-4 
+
+## Update 2
+
+Initially we were unclear whether we wanted to use short or long prompts. The meeting with our TA helped specify that we should use longer prompt. For trial 11-15, we were using short prompts to limit the amount of tokens used.

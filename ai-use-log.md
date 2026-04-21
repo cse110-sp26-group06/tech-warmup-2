@@ -87,3 +87,18 @@ Tile colors:
   - Persist preference in localStorage
   - Only update styling and theme logic. Keep everything else unchanged.
 
+## Jargon Used - Maxime & Aidan
+### Prompt 1: Introducing the non-intrusive jargon
+- Reformat the text to match professional slot machine jargon. Do not implement new features. Examples include: Betting Limits, Fixed Jackpot, Bet/Wager, Buy-In/Add-on
+
+### Prompt 2: Remove payline map and layout change
+- Keep the playtable, however in index.html, remove the playline map since it is redundant. Replace with a spin history that remembers the last 3 spins. Incorporate the breakdown list text into the winner breakdown table. Swap the buttons and the sliders so the buttons are closer to the slots. Make the spin button more attractive and prominent by making it larger and in the middle
+
+## Prompt 3: Update spin button
+- Fix the bug that when you win, the game does not allow you to spin again. Make a spinning border around the spin button to draw attention. Modified the row of buttons under the reels in the following order, first row: 'start auto spin', 'SPIN', 'stop auto spin' and on the second row: 'refill tokens', 'open paytable'
+
+## Prompt 4: Fixing the button bar
+- Remove the spinning feature from the spin button. Instead, make the spin button pulsing, the pusling stops while the slots are running. Have the auto spin, stop auto spin, refill tokens, open paytable button the same width (enough to fit text). Have the Spin button be 50% larger
+
+## Prompt 5: Update README
+- Based on the code, update the README.md to contain: a concise overview, installation/setup, usage examples, configuration
