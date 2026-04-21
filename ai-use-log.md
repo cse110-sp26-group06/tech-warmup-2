@@ -47,3 +47,41 @@ Run tests to ensure all animations are smooth and don't cause performance issues
 
 ### Phase 4: Fix Slot Reel Spin Animation
 - The current slot reel spin animation moves the symbols out of the reel container. Fix the animation so that the slots spin within the reel container, just like the old animation in trial 7.
+
+### Phase 5: Added 
+- Refactor the UI to support both light mode and dark mode using a theme system (CSS variables or Tailwind config).
+- Requirements:
+ - Do not change layout, structure, or game logic.
+ - Only modify styling.
+ - Implement theme switching using a data-theme="light" and data-theme="dark" attribute on the root element (or Tailwind dark: class).
+ - Light Mode (default) — Warm Casino Theme
+- Ensure accessible contrast in both modes
+- Tile colors:
+ - Bronze → #B87333
+ - Silver → #C0C0C0
+ - Gold → #D4A017
+ - Diamond → #7DD3FC (slightly cool for contrast)
+ - Dark Mode — Cool Blue / Tech Theme
+ - Background: #0B0F1A → #121A2B
+ - Panels: #111827
+ - Cards: #1F2937
+ - Primary accent: #3B82F6
+ - Secondary accent: #60A5FA
+ - Text: #E5E7EB
+ 
+Tile colors:
+ - Bronze → #B87333 (keep for recognition)
+ - Silver → #9CA3AF
+ - Gold → #E5E7EB (neutral metallic, NOT yellow)
+ - Diamond → #22D3EE (bright, glowing blue)
+ - Effects
+  - Add subtle glow to winning tiles:
+  - Light mode: soft gold glow
+  - Dark mode: blue glow
+  - Use soft borders: rgba(0,0,0,0.1) (light) and rgba(255,255,255,0.08) (dark)
+
+- Toggle
+  - Add a simple theme toggle (button or switch)
+  - Persist preference in localStorage
+  - Only update styling and theme logic. Keep everything else unchanged.
+
