@@ -10,61 +10,40 @@
 
 ## Visual Themes - Stephanie & Dishita
 ### Phase 1: Typography
-- Replace all typography in my slot machine app with the following font system. First, import the following fonts: Abril Fatface, Barlow, Public Sans. Then, systematically update every text element according to these rules:
-
-**For all TITLE text and major announcements:**
-- Change font to Abril Fatface with size 64px with 72px line-height. This is a bold, dramatic serif that commands attention
-
-**For all H1 and H2 headings (like section headers, game mode names, feature titles):**
-- Change font to Barlow. All H1: 44px / 58px line-height, font-weight: 600 (semibold). All H2: 36px / 42px line-height font-weight: 600 (semibold). This is a modern, geometric sans-serif
-
-**For all BODY TEXT, labels, and UI elements (like bet amounts, balance displays, button labels, captions):**
-- Change font to Public Sans. For subtitles: 28px / 36px line-height, font-weight: 400 (regular).All Body 1: 24px / 28px line-height, font-weight: 400 or 700 (bold for emphasis). All Body 2: 18px / 24px line-height, font-weight: 400 or 700. For all captions: 16px / 24px line-height, font-weight: 400. This is a clean, readable sans-serif optimized for screens
-
-Go through EVERY component in the app and update the typography. Pay special attention to: slot machine displays, balance and bet amount displays, win amount announcements, button text.
-
-Make sure you preserve any existing styling (colors, spacing, etc.) - ONLY change the fonts, sizes, and line-heights as specified above. After completion, verify that no text is still using old fonts.
+- Replace all typography in my slot machine app with the following font system. First, import the following fonts: Abril Fatface, Barlow, Public Sans. Then, systematically update every text element to these rules. For all title text, change font to Abril Fatface for a bold, dramatic serif that commands attention. For all major headings, change font to Barlow for a modern, geometric sans-serif. For body text, labels, and captions, change font to Public Sans for a clean, readable sans-serif. Make sure you preserve any existing styling (colors, spacing, etc.). Only change the fonts, sizes, and line-heights as specified above. After completion, verify that no text is still using old fonts.
 
 ### Phase 2: Color Palette
-- Transform the entire color scheme of the slot machine app to use this casino color palette. Replace every color systematically according to these rules:
+- Transform the entire color scheme of the slot machine app to use this casino color palette. Replace every color systematically according to these rules. For primary colors, use rich brown `#3D1800` to replace all primary background colors, main container backgrounds, and dark structural elements with this color. This should be the dominant background color throughout the app. Use gold yellow `#FFD166` to replace all primary accent colors, call-to-action highlights, and "win" related elements with this color. Use black `#000000` for all primary text that appears on light backgrounds. For secondary colors, use vibrant red `#FF5F5F` for secondary call-to-action buttons, "Spin" or action buttons, alert/urgent elements, and special feature highlights. Use dark gold `#C8860A` for button borders, secondary accents, gradient endpoints, and hover states on gold elements. For accent colors, use warm orange `#FF9E8A` for tertiary accents, hover states, and friendly UI elements. Use light yellow `#FFEAA0` for background cards, soft highlights, and subtle accents. Use light orange `#FFA9A3` as an additional accent for variety in multi-element displays. Replace solid backgrounds with gradients where appropriate: use `#3D1800, #C8860A` for headers and hero sections; use `#FFD166, #FFEAA0` for win displays and celebration; use `#FF5F5F, #FF9E8A, #FFA9A3` for energy elements and special features. After completion, verify that no old colors remain in any component.  
 
-**PRIMARY COLORS:**
+### Phase 3: Special Visual Effects
+- Add these special visual effects to the slot machine app to create a more immersive, premium casino experience. 
+ 1. Create a raining coins effect that triggers during jackpot wins and major payouts. The color should be gold and the coins should fall from the top of the screen to the bottom, creating a celebratory atmosphere. Loop continuously while celebrating.
 
-1. **Rich Brown `#3D1800`** - Replace ALL primary background colors, main container backgrounds, and dark structural elements with this color. This should be the dominant background color throughout the app.
+ 2. Create an ambient sparkle effect that continuously twinkles in the background during gameplay. The animation should be subtle and elegant, using small white or gold sparkles that randomly appear and fade out across the background. Should not interfere with gameplay or readability, and stays faint in the background.
 
-2. **Gold Yellow `#FFD166`** - Replace ALL primary accent colors, call-to-action highlights, and "win" related elements with this color. Use for:
-   - Primary button backgrounds
-   - Currency displays
-   - Win amount highlights
-   - Important borders that need attention
-   - Active state indicators
+ 3. Add glowing box shadows to all important interactive elements.
 
-3. **Pure Black `#000000`** - Use for ALL primary text that appears on light backgrounds.  
+ 4. Create a particle burst effect that fires when the user wins or clicks important buttons.
 
-**SECONDARY COLORS:**
+ 5. Add a pulsing effect to the jackpot display and other critical elements. Apply to the jackpot amount display, special feature icons, "SPIN" button when ready
 
-4. **Vibrant Red `#FF5F5F`** - Use for:
-   - Secondary call-to-action buttons
-   - "Spin" or action buttons
-   - Alert/urgent elements
-   - Special feature highlights
+Implement all five effects. Make sure animations perform smoothly. Position effect layers correctly so they don't interfere with interactive elements. Run tests to ensure all effects trigger correctly and don't cause performance issues.
 
-5. **Dark Gold `#C8860A`** - Use for:
-   - Button borders
-   - Secondary accents
-   - Gradient endpoints  
-   - Hover states on gold elements
+### Phase 4: Animations
+- Implement these animations:
+1. Slot Reel Spin Animation
+    - When spin button is clicked, each reel should animate vertically
+    - Final symbol should "snap" into place with slight bounce
 
-**ACCENT COLORS:**
+2. Bounce Effect: add bouncing animation to coins, win displays, and celebration elements:
 
-6. **Warm Orange `#FF9E8A`** - Use for tertiary accents, hover states, and friendly UI elements
-7. **Light Yellow `#FFEAA0`** - Use for background cards, soft highlights, and subtle accents
-8. **Light Orange `#FFA9A3`** - Additional accent for variety in multi-element displays
+3. Button Hover Animations: add responsive hover animations to all interactive buttons
 
-**GRADIENTS - Replace solid backgrounds with these gradients where appropriate:**
+4. Fade-In Transitions: add smooth fade-in effects for content appearing on screen
 
-- **Headers and hero sections**: `#3D1800, #C8860A`
-- **Win displays and celebration**: `#FFD166, #FFEAA0`
-- **Energy elements and special features**: `#FF5F5F, #FF9E8A, #FFA9A3`
+5. Number Count-Up: when balance or winnings change, animate the numbers counting up
 
-Go through every component and update colors. Make sure there are no remnants of the old color scheme.  
+Run tests to ensure all animations are smooth and don't cause performance issues.
+
+### Phase 4: Fix Slot Reel Spin Animation
+- The current slot reel spin animation moves the symbols out of the reel container. Fix the animation so that the slots spin within the reel container, just like the old animation in trial 7.
