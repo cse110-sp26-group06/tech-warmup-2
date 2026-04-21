@@ -48,7 +48,7 @@ Run tests to ensure all animations are smooth and don't cause performance issues
 ### Phase 4: Fix Slot Reel Spin Animation
 - The current slot reel spin animation moves the symbols out of the reel container. Fix the animation so that the slots spin within the reel container, just like the old animation in trial 7.
 
-### Phase 5: Added 
+### Phase 5: Added Dark mode and light mode option
 - Refactor the UI to support both light mode and dark mode using a theme system (CSS variables or Tailwind config).
 - Requirements:
  - Do not change layout, structure, or game logic.
