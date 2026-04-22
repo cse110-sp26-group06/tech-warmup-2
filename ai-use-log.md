@@ -217,5 +217,5 @@ This is a slot machine web app that runs on vanilla web technology. I want you t
   - Win condition displays after a winning spin: Checks the win message, winMeta, and breakdown list all describe the expected Top Row gold win and 360 credit payout.
   - Cannot spin with 0 balance: Sets credits to zero, expects the spin button to be disabled, and verifies calling spin() does nothing except show an insufficient-credits message (tests/final-iteration-tests.ts:292).
   - Spin button disables during an active spin: Starts a spin and checks that the app marks itself as spinning and disables the spin button until the spin finishes
-The results have been documented as screenshots under each trial's respective `test-results` folder. 
+- The results have been documented as screenshots under each trial's respective `test-results` folder. 
 
