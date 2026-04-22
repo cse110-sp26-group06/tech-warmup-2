@@ -171,5 +171,10 @@ This is a slot machine web app that runs on vanilla web technology. I want you t
 - Trial 10: Write a unit test that applies a stored dark theme during initialization seeds localStorage with the saved   theme and consent, loads index.html in an iframe, and verifies the page bootstraps with data-theme="dark".
 - Trial 15: Write a unit test that renders the spin-history empty state on initial load loads the page fresh and checks that the spin-history panel starts with No spins recorded yet. Ensure the app keeps the expected paytable ordering in game configuration verifies the symbol order, Bronze weight, the star 5-match payout, and that Trial 15 still exposes 10 paylines.
 - Trial 19: Write a unit test that sanitizes and persists the saved player name on the profile page enters a messy name, saves it, and checks the UI and localStorage both contain the cleaned Ada Lovelace value. Ensures the app purchases and equips an icon while updating the shared wallet preloads a wallet/profile state, buys Bot Buddy, and verifies the token count drops to 650, and both wallet/profile persistence are updated.
-
+- Trial 24(final iteration tests): tests the following cases
+  - Spin changes the displayed result grid: verifies a spin changes the visible symbols and that the deterministic winning grid includes gold in expected positions
+  - Balance updates correctly after a winning spin: confirms the spin completes and the UI updates to 3,300 tokens with a 360 last award.
+  - Win condition displays after a winning spin: Checks the win message, winMeta, and breakdown list all describe the expected Top Row gold win and 360 credit payout.
+  - Cannot spin with 0 balance: Sets credits to zero, expects the spin button to be disabled, and verifies calling spin() does nothing except show an insufficient-credits message (tests/final-iteration-tests.ts:292).
+  - Spin button disables during an active spin: Starts a spin and checks that the app marks itself as spinning and disables the spin button until the spin finishes
 

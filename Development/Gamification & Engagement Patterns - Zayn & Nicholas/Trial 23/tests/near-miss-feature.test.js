@@ -101,18 +101,37 @@
   function loadApplicationWindow() {
     return new Promise((resolve, reject) => {
       const iframe = document.createElement("iframe");
+      const timeoutMs = 5000;
+      const pollIntervalMs = 25;
       iframe.src = "../index.html";
-      iframe.hidden = true;
       iframe.loading = "eager";
+      iframe.setAttribute("aria-hidden", "true");
+      iframe.style.position = "absolute";
+      iframe.style.left = "-10000px";
+      iframe.style.top = "0";
+      iframe.style.width = "1440px";
+      iframe.style.height = "1200px";
+      iframe.style.border = "0";
+      iframe.style.opacity = "0";
+      iframe.style.pointerEvents = "none";
       iframe.addEventListener("load", () => {
-        window.setTimeout(() => {
+        const startedAt = window.performance.now();
+
+        const awaitDebugHooks = () => {
           if (iframe.contentWindow?.promptDropDebug) {
             resolve({ appWindow: iframe.contentWindow, iframe });
             return;
           }
 
-          reject(new Error("Prompt Drop debug hooks did not initialize inside the iframe."));
-        }, 120);
+          if (window.performance.now() - startedAt >= timeoutMs) {
+            reject(new Error("Prompt Drop debug hooks did not initialize inside the iframe."));
+            return;
+          }
+
+          window.setTimeout(awaitDebugHooks, pollIntervalMs);
+        };
+
+        awaitDebugHooks();
       });
       iframe.addEventListener("error", () => {
         reject(new Error("The Prompt Drop application iframe could not be loaded."));
