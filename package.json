@@ -3,7 +3,9 @@
   "version": "1.0.0",
   "description": "AI Slot Machine Round 2",
   "main": "index.js",
-  "scripts": {},
+  "scripts": {
+    "test:trial24:lint": "playwright test tests/trial-24-linting-tests.ts --project=chromium"
+  },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/cse110-sp26-group06/tech-warmup-2.git"
