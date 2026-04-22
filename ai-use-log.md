@@ -98,7 +98,7 @@ Tile colors:
 - Fix the bug that when you win, the game does not allow you to spin again. Make a spinning border around the spin button to draw attention. Modified the row of buttons under the reels in the following order, first row: 'start auto spin', 'SPIN', 'stop auto spin' and on the second row: 'refill tokens', 'open paytable'
 
 ## Prompt 4: Fixing the button bar
-- Remove the spinning feature from the spin button. Instead, make the spin button pulsing, the pusling stops while the slots are running. Have the auto spin, stop auto spin, refill tokens, open paytable button the same width (enough to fit text). Have the Spin button be 50% larger
+- Remove the spinning feature from the spin button. Instead, make the spin button pulsing, the pulsing stops while the slots are running. Have the auto spin, stop auto spin, refill tokens, open paytable button the same width (enough to fit text). Have the Spin button be 50% larger
 
 ## Prompt 5: Update README
 - Based on the code, update the README.md to contain: a concise overview, installation/setup, usage examples, configuration
@@ -125,3 +125,28 @@ This is a slot machine application created with basic web technology. I want you
 
 #### Side Note
 Codex initially refused to carry out this prompt due to its emphasis on exploiting features that lead to addiction. Was able to bypass this by telling Codex this was for a classroom experiment
+
+### Prompt 1: Bonus Implementation/Style Fix
+You are a senior software engineer who formerly worked at DraftKings on their online casinos. You are given a slot machine webapp that runs entirely on vanilla HTML, CSS, and JavaScript. Allow players to purchase a bonus multiplier on their next spin, allow 2x,5x, and 10x multipliers, increasing the cost proportionally but not linearly for each one, ensure return to player for bonuses average 95% across a large amount of uses. Each bonus should cause extra visuals/audio to appear when spinning with the bonus active, increasing in flashiness with how much money they spend. Only modify the underlying odds and implement the bonus button/menu/visuals. Do NOT delete any visuals that already exist. Document all code to enterprise standard, and create additional unit tests to verify both the bonus and visual changes function properly.
+
+#### Follow Up Prompt 1:
+Remove "Purchased multipliers use separate RTP-controlled reel odds, do not stack with the hidden classroom reward, and apply only to the next completed spin" from the bonus menu. Also, ensure house rules text is the same color as the rest of the app
+
+#### Follow Up Prompt 2:
+Thanks for the text removal, the color is still wrong though. match it to "Standard payline and award conditions apply"
+
+### Prompt 1: Near-Miss Visuals
+You are a senior software engineer who formerly worked at DraftKings on their online casinos. You are given a slot machine webapp that runs entirely on vanilla HTML, CSS, and JavaScript. Implement a near-
+miss feature that shows paylines that are only missing one symbol to have won. Connect the individual slot symbols with lines in the same palette as the rest of the app. These lines should only be visible
+until the next spin button is pressed. Document all code to enterprise standard, and create additional unit tests to verify the visuals do not conflict with any existing assets.
+
+#### Follow Up Prompt 1:
+make the lines more translucent, they should blend into the slots, not be overlaid
+
+#### Follow Up Prompt 2:
+little bit higher opacity please
+
+#### Follow Up Prompt 3:
+in dark mode, the lines vary in opacity as they are between slot sections. Make sure they're consistent, and heighten the contrast to account for darker background colors
+
+
