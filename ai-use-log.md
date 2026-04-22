@@ -13,8 +13,16 @@ Table of Contents
  2.  Generate a slot machine app with grid 3x5. The slot allows multiway awards, and the award is given starting from the match of 3. Each symbol has different awards, and it is distributed to two groups: high award group which appears less frequently on reels and has award higher than 1000 for the match of 3, and low award group which appears 6 times more frequently on reels and has award lower than 200 for the match of 3. The award gets doubled when the number of match increases. There needs to be an button that opens up the seperate information page that contains the paytable. For a reward higher than 1000, there needs to be special effect of raining coins.
  3. while maintaining all the features, add a feature which user can modify the amount of cost. Add an auto spin button feature which let user to set number of spins and cost per spin. when the user first enter the webpage, the website should open a pop-up window that says "We care about your privacy" and user can continue when he press accept button next to "checked the privacy polices and agree with terms". 
 
-## Modified Prompt 
+### Modified Prompt 
  Create a slot machine app that uses vanilla web technology like HTML, CSS, JavaScript, and platform APIs. The slot machine should make fun of AI, as in you are winning tokens and spending tokens. Use a 5x3 reel system. Symbols of star, diamond, gold, silver, bronze. Include paylines of 3 horizontal rows: top, middle, bottom. 5 vertical: columns 1-5. 2 main diagonals: top left to bottom right & bottom left to top right. Determine payout by matching at least 3 symbols in straight line. Implement the following payout. Star: 3 in a Row = 15x; 4 in a Row = 30x; 5 in a Row = 60x. Diamond: 3 in a Row = 8x; 4 in a Row = 16x; 5 in a Row = 32x. Gold: 3 in a Row = 4x; 4 in a Row = 8x; 5 in a Row = 16x. Silver: 3 in a Row = 2x; 4 in a Row = 4x; 5 in a Row = 8x. Bronze: 3 in a Row = 1x; 4 in a Row = 2x; 5 in a Row = 4x. Only pay highest paying multiway award. Each app organizes payout table in organized manner. Create special mechanics or effects for high awards such as raining coin, sparkles in background. Provide auto spin button and ability to set number of spins and cost per spin via slider. Create pop up privacy term to accept privacy policy and terms of services. Ask use share of location as legitimacy of gambling differs by states.
+
+### Observations of the final model before handoff:
+- The final model has a solid, basic gameplay foundation. It includes the core slot loop, adjustable
+   wager, auto-spin queue, payline legend, winner breakdown, separate paytable page, and a
+  privacy/location gate.
+- The main added feature is the app's structural clarity: the game logic is configurable through game-
+  data.js, and the tests verify deterministic spin-grid generation and payline/payout
+  configuration.
 
 ## Visual Themes - Stephanie & Dishita
 ### Phase 1: Typography
@@ -95,6 +103,20 @@ Tile colors:
   - Persist preference in localStorage
   - Only update styling and theme logic. Keep everything else unchanged.
 
+### Observations of the final model before handoff:
+- The main contribution here is polish and presentation. The final model, trial 10, adds persistent light/dark
+  theming, richer visual tokens, ambient sparkles, glow effects, and
+  motion-based animation.
+- It improves the perceived quality of the product a lot. The theme hydration happens early in
+  page load, which helps avoid a flash of the wrong theme.
+- It also shows some accessibility awareness through reduced-motion handling and theme
+    persistence.
+- The main shortcoming is that most of the improvement is cosmetic rather than mechanical. The
+  slot system is more attractive, but the underlying gameplay depth is not significantly
+  expanded.
+- It also introduces more rendering complexity and dependency on animated effects, which can
+  increase maintenance cost and make the interface feel visually busy.
+
 ## Jargon Used - Maxime & Aidan
 ### Prompt 1: Introducing the non-intrusive jargon
 - Reformat the text to match professional slot machine jargon. Do not implement new features. Examples include: Betting Limits, Fixed Jackpot, Bet/Wager, Buy-In/Add-on
@@ -111,6 +133,17 @@ Tile colors:
 ## Prompt 5: Update README
 - Based on the code, update the README.md to contain: a concise overview, installation/setup, usage examples, configuration
 
+### Observations of the final model before handoff:
+- Trial 15’s clearest addition is interpretability. It adds a spin-history panel and a more
+    explicit winner-breakdown table, which makes results easier to understand after each spin.
+- This is useful because the game only pays the single highest qualifying payline, so showing
+    paid vs. merely qualified outcomes reduces confusion.
+- It also keeps the theme/consent flow and overall polished UI from later iterations, so it feels
+    more complete than a bare mechanics prototype.
+- One shortcoming is that the spin history is short-lived and limited. It only keeps a small
+  recent list and does not persist it across reloads, so it is more of a session aid than a real
+  history feature.
+
 ## Users - Arpita & Ethan
 
 ### Prompt 1: Daily bonus and Responsible Playing Timer
@@ -125,6 +158,13 @@ Allow the user to input their name for further personalization. Allow them to pu
 
 ### Prompt 4: Fixing UI for Profile Page 
 Make the user profile a seperate page, put the button for user profile at the top left of the page. Also have a pop up to let the user know when they don't have enough credits for the wager. 
+
+### Observations of the final model before handoff:
+- Adds a profile page, local player-name persistence, unlockable/equippable icons, a shared wallet across pages, daily bonus/streak logic, play-time tracking, refill countdowns, and invite/share behavior.
+- Shifts from “slot machine demo” toward a lightweight retention system. It introduces personalization and recurring-return mechanics instead of only spin mechanics.
+- Player names are sanitized before saving, icon purchases update the shared wallet, and the daily reward/streak system is persisted locally.
+- Shortcomings: this version has many interdependent local states, so it is more fragile and harder to reason about than earlier trials.
+- Entirely client-side. Wallet balance, purchases, and streaks all live in localStorage, which means they are easy to reset or manipulate and do not represent durable user accounts.
 
 ## Gamification & Engagement Patterns - Zayn & Nicholas
 
@@ -177,4 +217,5 @@ This is a slot machine web app that runs on vanilla web technology. I want you t
   - Win condition displays after a winning spin: Checks the win message, winMeta, and breakdown list all describe the expected Top Row gold win and 360 credit payout.
   - Cannot spin with 0 balance: Sets credits to zero, expects the spin button to be disabled, and verifies calling spin() does nothing except show an insufficient-credits message (tests/final-iteration-tests.ts:292).
   - Spin button disables during an active spin: Starts a spin and checks that the app marks itself as spinning and disables the spin button until the spin finishes
+The results have been documented as screenshots under each trial's respective `test-results` folder. 
 
