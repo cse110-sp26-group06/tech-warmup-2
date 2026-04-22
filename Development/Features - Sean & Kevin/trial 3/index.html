@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Token Torrent 243</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body class="game-page">
+    <main class="app-shell">
+      <section class="hero">
+        <p class="eyebrow">243 ways to monetize a prompt</p>
+        <h1>Token Torrent 243</h1>
+        <p class="tagline">
+          A 3x5 multiway AI slot where low-tier symbols flood the reels, high-tier
+          symbols hit hard, and every extra matching reel doubles the award.
+        </p>
+      </section>
+
+      <section class="machine" aria-label="3 by 5 multiway slot machine">
+        <div class="status-bar">
+          <div class="stat-card">
+            <span class="stat-label">Token Bank</span>
+            <strong id="tokenCount">3,000</strong>
+          </div>
+          <div class="stat-card">
+            <span class="stat-label">Spin Cost</span>
+            <strong id="spinCost">80</strong>
+          </div>
+          <div class="stat-card">
+            <span class="stat-label">Active Ways</span>
+            <strong id="wayCount">243</strong>
+          </div>
+          <div class="stat-card">
+            <span class="stat-label">Last Award</span>
+            <strong id="lastAward">0</strong>
+          </div>
+        </div>
+
+        <div class="reel-stage">
+          <div class="machine-topline">
+            <span>Multiway pays left to right from reel 1</span>
+            <span>Low group appears 6x more often overall</span>
+          </div>
+          <div
+            id="reelBoard"
+            class="reel-board"
+            role="img"
+            aria-label="3 rows and 5 reels slot grid"
+          ></div>
+          <div class="glow-ring" aria-hidden="true"></div>
+        </div>
+
+        <div class="group-notes">
+          <article class="group-card high-card">
+            <h2>High Award Group</h2>
+            <p>Rare on the reels. Every 3-match pays more than 1000 tokens.</p>
+          </article>
+          <article class="group-card low-card">
+            <h2>Low Award Group</h2>
+            <p>Shows up 6x more often overall. Every 3-match pays less than 200.</p>
+          </article>
+        </div>
+
+        <section class="settings-grid" aria-label="spin settings">
+          <article class="settings-card">
+            <div class="settings-heading">
+              <h2>Cost Controls</h2>
+              <span>Manual spins use the active cost below.</span>
+            </div>
+            <div class="field-grid">
+              <label class="field">
+                <span>Current Spin Cost</span>
+                <input
+                  id="costInput"
+                  type="number"
+                  min="1"
+                  step="1"
+                  inputmode="numeric"
+                  value="80"
+                />
+              </label>
+            </div>
+            <div class="settings-actions">
+              <button id="applyCostButton" class="ghost-button" type="button">
+                Apply Cost
+              </button>
+            </div>
+          </article>
+
+          <article class="settings-card">
+            <div class="settings-heading">
+              <h2>Auto Spin</h2>
+              <span>Set how many spins to run and the cost used for each one.</span>
+            </div>
+            <div class="field-grid two-up">
+              <label class="field">
+                <span>Number Of Spins</span>
+                <input
+                  id="autoSpinCount"
+                  type="number"
+                  min="1"
+                  step="1"
+                  inputmode="numeric"
+                  value="10"
+                />
+              </label>
+              <label class="field">
+                <span>Auto Spin Cost</span>
+                <input
+                  id="autoSpinCost"
+                  type="number"
+                  min="1"
+                  step="1"
+                  inputmode="numeric"
+                  value="80"
+                />
+              </label>
+            </div>
+            <div class="settings-actions">
+              <button id="autoSpinButton" class="spin-button" type="button">
+                Start Auto Spin
+              </button>
+              <button id="stopAutoSpinButton" class="ghost-button" type="button">
+                Stop Auto Spin
+              </button>
+            </div>
+            <p id="autoSpinStatus" class="settings-note">Auto spin idle.</p>
+          </article>
+        </section>
+
+        <div class="controls">
+          <button id="spinButton" class="spin-button" type="button">
+            Spin The Grid
+          </button>
+          <button id="resetButton" class="ghost-button" type="button">
+            Refill Wallet
+          </button>
+          <a
+            class="ghost-button button-link"
+            href="paytable.html"
+            target="_blank"
+            rel="noopener"
+            >Open Paytable</a
+          >
+        </div>
+
+        <p id="message" class="message" aria-live="polite">
+          The reels are ready to convert your token balance into a speculative
+          narrative.
+        </p>
+
+        <section class="breakdown-panel" aria-label="spin breakdown">
+          <div class="panel-heading">
+            <h2>Spin Breakdown</h2>
+            <span id="winMeta">Need 3 consecutive reels from the left to pay.</span>
+          </div>
+          <ul id="breakdownList" class="breakdown-list">
+            <li class="empty-state">
+              No spin yet. The machine is waiting for another miraculous funding
+              round.
+            </li>
+          </ul>
+        </section>
+      </section>
+    </main>
+
+    <div id="coinRain" class="coin-rain" aria-hidden="true"></div>
+    <div
+      id="privacyModal"
+      class="privacy-modal"
+      role="dialog"
+      aria-modal="true"
+      aria-labelledby="privacyTitle"
+    >
+      <div class="privacy-card">
+        <p class="eyebrow">Before we overfit your behavior</p>
+        <h2 id="privacyTitle">We care about your privacy</h2>
+        <p class="privacy-copy">
+          This site stores a tiny bit of local state so it can remember your
+          privacy choice and keep your token spectacle moving.
+        </p>
+        <div class="privacy-actions">
+          <label class="privacy-check" for="privacyCheckbox">
+            <input id="privacyCheckbox" type="checkbox" />
+            <span>Checked the privacy policies and agree with terms</span>
+          </label>
+          <button id="privacyAcceptButton" class="spin-button" type="button" disabled>
+            Accept
+          </button>
+        </div>
+      </div>
+    </div>
+
+    <script src="game-data.js"></script>
+    <script src="script.js"></script>
+  </body>
+</html>

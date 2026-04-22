@@ -1,0 +1,70 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="Paytable and rule reference for the Golden Grid Multiway slot machine."
+    />
+    <title>Golden Grid Multiway Paytable</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body class="paytable-body">
+    <main class="app-shell paytable-shell" data-paytable-root>
+      <section class="hero card paytable-hero">
+        <div class="hero-copy">
+          <div>
+            <p class="eyebrow">Information page</p>
+            <h1>Golden Grid Paytable</h1>
+            <p class="hero-text">
+              All awards start from 3 matching reels from the left. The symbol
+              award doubles on reel 4 and doubles again on reel 5 before the
+              total number of ways is applied.
+            </p>
+          </div>
+          <a class="ghost-link" href="index.html">Back to machine</a>
+        </div>
+      </section>
+
+      <section class="paytable-layout">
+        <section class="card paytable-card">
+          <p class="eyebrow">Core rules</p>
+          <h2>How awards work</h2>
+          <ul class="rule-list">
+            <li>Multiway awards pay on consecutive reels from reel 1.</li>
+            <li>3 matches unlock the base symbol award.</li>
+            <li>4 matches pay 2x the base award per way.</li>
+            <li>5 matches pay 4x the base award per way.</li>
+            <li>Low-award symbols appear 6 times more often on every reel strip.</li>
+            <li>High-award symbols appear once per reel strip and start above 1000.</li>
+          </ul>
+        </section>
+
+        <section class="card paytable-card">
+          <p class="eyebrow">Symbol groups</p>
+          <h2>Frequency summary</h2>
+          <div class="group-columns">
+            <div class="group-column">
+              <h3>Low award group</h3>
+              <ul class="group-detail-list" id="low-group-list"></ul>
+            </div>
+            <div class="group-column">
+              <h3>High award group</h3>
+              <ul class="group-detail-list" id="high-group-list"></ul>
+            </div>
+          </div>
+        </section>
+      </section>
+
+      <section class="card paytable-card">
+        <p class="eyebrow">Awards by symbol</p>
+        <h2>Paytable</h2>
+        <div class="paytable-list" id="paytable-list"></div>
+      </section>
+    </main>
+
+    <script src="script.js"></script>
+    <script src="paytable.js"></script>
+  </body>
+</html>
