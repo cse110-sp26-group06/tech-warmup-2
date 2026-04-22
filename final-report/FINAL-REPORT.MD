@@ -6,3 +6,6 @@ For visual themes integration, we iterated on the color palettes and the typogra
 
 ## Jargon - Maxime & Aidan
 Our implementation was quite strightforward, we needed to integrate slot machine jargon in our website. After a single prompt, the website looked more professional and tailored to slot machines. We then created some prompts to fix the layout of the website to remove unecessary space and make the text fit better together. We also used a prompt to update our README to improve readability. Throughout our portion, we used short prompts to not use tokens however after our meeting with the TA, we learned that it would have been better practice to use longer and more specific prompts.
+
+## Gamification & Engagement Patterns - Zayn & Nicholas
+Our research led us to the discovery of multiple individual features that could help improve engagement in our slot machine. Among them were variable rewards, bonuses, modifiers, and near misses, all of which have impact on behavior and conditioning. To implement these main features, we dedicated one prompt/trial for each one. First prompt implemented variable rewards, second prompt implemented bonuses/modifiers, and the third prompt implemented near misses. The slot machine in its final state contains all of these features to drive the highest engagement and keep player retention. 
