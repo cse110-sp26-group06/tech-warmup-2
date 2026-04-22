@@ -7,7 +7,7 @@ const trial22Url = pathToFileURL(
     process.cwd(),
     "Development",
     "Gamification & Engagement Patterns - Zayn & Nicholas",
-    "Trial 22",
+    "Trial 24",
     "index.html",
   ),
 ).toString();

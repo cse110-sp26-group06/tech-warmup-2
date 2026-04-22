@@ -1,5 +1,13 @@
 # Ai Use Log
 
+Table of Contents
+- [Features - Sean & Kevin](#features---sean--kevin)
+- [Visual Themes - Stephanie & Dishita](#visual-themes---stephanie--dishita)
+- [Jargon Used - Maxime & Aidan](#jargon-used---maxime--aidan)
+- [Users - Arpita & Ethan](#users---arpita--ethan)
+- [Gamification & Engagement Patterns - Zayn & Nicholas](#gamification----engagement-patterns---zayn--nicholas)
+- [Unit Testing with Playwright](#unit-testing-with-playwright)
+
 ## Features - Sean & Kevin 
  1. Create a slot machine app that uses vanilla web technology like HTML, CSS, JavaScript, and platform APIs. The slot machine should make fun of AI, as in you are winning tokens and spending tokens.
  2.  Generate a slot machine app with grid 3x5. The slot allows multiway awards, and the award is given starting from the match of 3. Each symbol has different awards, and it is distributed to two groups: high award group which appears less frequently on reels and has award higher than 1000 for the match of 3, and low award group which appears 6 times more frequently on reels and has award lower than 200 for the match of 3. The award gets doubled when the number of match increases. There needs to be an button that opens up the seperate information page that contains the paytable. For a reward higher than 1000, there needs to be special effect of raining coins.
@@ -154,5 +162,14 @@ This is a slot machine web app that runs on vanilla web technology. However, we 
 
 ### Prompt 5: HTML and CSS Comments
 This is a slot machine web app that runs on vanilla web technology. I want you to simply go through and leave comments. The purpose of these comments is to make the code more readable for future developers. The JavaScript is mostly commented, but the HTML and CSS files aren't. Leave comments on the HTML and CSS files.
+
+## Unit Testing with Playwright
+- Specific unit tests were written for each group's final iteration/model: Trial 4, Trial 10, Trial 15, Trial 19, and Trial 24. These tests are located under a `tests` folder in each trial's folder, as well as the `tests` directory in the project. Each test file corresponds to a specific trial and contains tests that verify the functionality and features implemented in that trial. Each test file was designed to test for specific features each group implemented in their trials. These were the prompts use to write tests for each group's final iteration/model:
+- Trial 4: Write a unit test that exposes the expected paytable and payline configuration checks the core slot config: 3
+  rows, 5 reels, 10 paylines, the exact Top Row cell layout, presence of California in the state list, the star 5-match payout, and that unknown symbols pay 0. The test should build a deterministic 5x3 spin grid from the weighted symbol picker replaces crypto.getRandomValues with a queued deterministic source, runs createSpinGrid(), and
+  verifies the exact symbol grid returned.
+- Trial 10: Write a unit test that applies a stored dark theme during initialization seeds localStorage with the saved   theme and consent, loads index.html in an iframe, and verifies the page bootstraps with data-theme="dark".
+- Trial 15: Write a unit test that renders the spin-history empty state on initial load loads the page fresh and checks that the spin-history panel starts with No spins recorded yet. Ensure the app keeps the expected paytable ordering in game configuration verifies the symbol order, Bronze weight, the star 5-match payout, and that Trial 15 still exposes 10 paylines.
+- Trial 19: Write a unit test that sanitizes and persists the saved player name on the profile page enters a messy name, saves it, and checks the UI and localStorage both contain the cleaned Ada Lovelace value. Ensures the app purchases and equips an icon while updating the shared wallet preloads a wallet/profile state, buys Bot Buddy, and verifies the token count drops to 650, and both wallet/profile persistence are updated.
 
 
