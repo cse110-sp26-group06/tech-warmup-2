@@ -1,5 +1,9 @@
 // @ts-check
-import { defineConfig, devices } from '@playwright/test';
+const path = require('node:path');
+const { defineConfig, devices } = require('@playwright/test');
+
+const configDir = __dirname;
+const repoRoot = path.resolve(configDir, '..');
 
 /**
  * Read environment variables from file.
@@ -12,8 +16,10 @@ import { defineConfig, devices } from '@playwright/test';
 /**
  * @see https://playwright.dev/docs/test-configuration
  */
-export default defineConfig({
-  testDir: './tests',
+module.exports = defineConfig({
+  testDir: '.',
+  testMatch: ['**/*.spec.{js,ts}', '**/*-tests.ts'],
+  outputDir: path.resolve(repoRoot, 'test-results'),
   /* Run tests in files in parallel */
   fullyParallel: true,
   /* Fail the build on CI if you accidentally left test.only in the source code. */
@@ -23,7 +29,11 @@ export default defineConfig({
   /* Opt out of parallel tests on CI. */
   workers: process.env.CI ? 1 : undefined,
   /* Reporter to use. See https://playwright.dev/docs/test-reporters */
-  reporter: 'html',
+  reporter: [
+    ['list'],
+    ['json', { outputFile: path.resolve(repoRoot, 'test-results', 'results.json') }],
+    ['html', { outputFolder: path.resolve(repoRoot, 'playwright-report'), open: 'never' }],
+  ],
   /* Shared settings for all the projects below. See https://playwright.dev/docs/api/class-testoptions. */
   use: {
     /* Base URL to use in actions like `await page.goto('')`. */
@@ -78,4 +88,3 @@ export default defineConfig({
   //   reuseExistingServer: !process.env.CI,
   // },
 });
-
