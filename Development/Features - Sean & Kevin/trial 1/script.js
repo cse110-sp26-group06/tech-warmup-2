@@ -1,111 +1,116 @@
-const STORAGE_KEY = "token-tumbler-9000";
-
-const SYMBOLS = [
-  {
-    key: "TOKEN",
-    blurb: "A usable unit of synthetic hope.",
-  },
-  {
-    key: "PROMPT",
-    blurb: "A politely phrased plea for competence.",
-  },
-  {
-    key: "GPU",
-    blurb: "The glowing rectangle that eats budgets.",
-  },
-  {
-    key: "AGENT",
-    blurb: "An eager intern with terminal access.",
-  },
-  {
-    key: "VC",
-    blurb: "Temporary money disguised as destiny.",
-  },
-  {
-    key: "HALLU",
-    blurb: "Confident fiction at production speed.",
-  },
-  {
-    key: "404",
-    blurb: "Your result exists in another tab.",
-  },
-];
-
-const PROFILES = {
-  1: {
-    name: "Dry run",
-    cost: 8,
-    multiplier: 1,
-    risk: 12,
-    weights: {
-      TOKEN: 18,
-      PROMPT: 17,
-      GPU: 13,
-      AGENT: 13,
-      VC: 10,
-      HALLU: 8,
-      404: 9,
+const SLOT_CONFIG = {
+  STORAGE_KEY: "token-tumbler-9000",
+  SYMBOLS: [
+    {
+      key: "TOKEN",
+      blurb: "A usable unit of synthetic hope.",
+    },
+    {
+      key: "PROMPT",
+      blurb: "A politely phrased plea for competence.",
+    },
+    {
+      key: "GPU",
+      blurb: "The glowing rectangle that eats budgets.",
+    },
+    {
+      key: "AGENT",
+      blurb: "An eager intern with terminal access.",
+    },
+    {
+      key: "VC",
+      blurb: "Temporary money disguised as destiny.",
+    },
+    {
+      key: "HALLU",
+      blurb: "Confident fiction at production speed.",
+    },
+    {
+      key: "404",
+      blurb: "Your result exists in another tab.",
+    },
+  ],
+  PROFILES: {
+    1: {
+      name: "Dry run",
+      cost: 8,
+      multiplier: 1,
+      risk: 12,
+      weights: {
+        TOKEN: 18,
+        PROMPT: 17,
+        GPU: 13,
+        AGENT: 13,
+        VC: 10,
+        HALLU: 8,
+        404: 9,
+      },
+    },
+    2: {
+      name: "Launch week",
+      cost: 12,
+      multiplier: 1.35,
+      risk: 24,
+      weights: {
+        TOKEN: 16,
+        PROMPT: 14,
+        GPU: 13,
+        AGENT: 13,
+        VC: 11,
+        HALLU: 11,
+        404: 10,
+      },
+    },
+    3: {
+      name: "Series A",
+      cost: 20,
+      multiplier: 1.85,
+      risk: 37,
+      weights: {
+        TOKEN: 13,
+        PROMPT: 12,
+        GPU: 14,
+        AGENT: 12,
+        VC: 12,
+        HALLU: 18,
+        404: 12,
+      },
+    },
+    4: {
+      name: "VC mode",
+      cost: 30,
+      multiplier: 2.45,
+      risk: 53,
+      weights: {
+        TOKEN: 11,
+        PROMPT: 10,
+        GPU: 13,
+        AGENT: 11,
+        VC: 16,
+        HALLU: 22,
+        404: 17,
+      },
     },
   },
-  2: {
-    name: "Launch week",
-    cost: 12,
-    multiplier: 1.35,
-    risk: 24,
-    weights: {
-      TOKEN: 16,
-      PROMPT: 14,
-      GPU: 13,
-      AGENT: 13,
-      VC: 11,
-      HALLU: 11,
-      404: 10,
-    },
-  },
-  3: {
-    name: "Series A",
-    cost: 20,
-    multiplier: 1.85,
-    risk: 37,
-    weights: {
-      TOKEN: 13,
-      PROMPT: 12,
-      GPU: 14,
-      AGENT: 12,
-      VC: 12,
-      HALLU: 18,
-      404: 12,
-    },
-  },
-  4: {
-    name: "VC mode",
-    cost: 30,
-    multiplier: 2.45,
-    risk: 53,
-    weights: {
-      TOKEN: 11,
-      PROMPT: 10,
-      GPU: 13,
-      AGENT: 11,
-      VC: 16,
-      HALLU: 22,
-      404: 17,
-    },
+  DEFAULT_STATE: {
+    balance: 120,
+    totalSpent: 0,
+    totalWon: 0,
+    totalSpins: 0,
+    bestWin: 0,
+    hypeLevel: 2,
+    soundEnabled: true,
+    halluHits: 0,
+    lastSymbols: ["PROMPT", "TOKEN", "GPU"],
+    recentRuns: [],
   },
 };
 
-const DEFAULT_STATE = {
-  balance: 120,
-  totalSpent: 0,
-  totalWon: 0,
-  totalSpins: 0,
-  bestWin: 0,
-  hypeLevel: 2,
-  soundEnabled: true,
-  halluHits: 0,
-  lastSymbols: ["PROMPT", "TOKEN", "GPU"],
-  recentRuns: [],
-};
+if (typeof window !== "undefined") {
+  window.SLOT_CONFIG = SLOT_CONFIG;
+}
+
+const { STORAGE_KEY, SYMBOLS, PROFILES, DEFAULT_STATE } = SLOT_CONFIG;
 
 const currency = new Intl.NumberFormat("en-US");
 
