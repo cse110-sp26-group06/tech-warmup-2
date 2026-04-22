@@ -1,3 +1,6 @@
+## App features - Kevin & Sean
+  We first used a prompt given from the warmup-1 and generated a simple 3 row slot machine. For second trial, we implemented the main features like 5x3 grid, division of high-pay and low-pay symbols, and the special effect for high reward, which were all well implemented. In the further entries, we used a detailed prompt for designing the symbols, adding convienience features like auto spin, and privacy pop up table which requests sharing location data and agreement on terms. Through discussion, we agreed that defining a fixed and related symbols with a reasonable reward is crucial for slot machine experience. So we concentrated our prompts on establishing detailed multiline reward logic, setting consistent symbols and placing them into high-pay and low-pay groups with distinguished reward effect.
+  
 ## Visual Themes - Stephanie & Dishita 
 For visual themes integration, we iterated on the color palettes and the typography. We added a dual-theme system with a light mode (brown/gold) and a dark mode (blue/black/silver color theme) while also refining font styles to improve readability and maintaining the slot-machine theme. We used prompts to standardize color and text roles, and this led to a more cohesive and flexible design without changing core functionality.
 
