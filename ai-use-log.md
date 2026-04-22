@@ -126,7 +126,7 @@ This is a slot machine application created with basic web technology. I want you
 #### Side Note
 Codex initially refused to carry out this prompt due to its emphasis on exploiting features that lead to addiction. Was able to bypass this by telling Codex this was for a classroom experiment
 
-### Prompt 1: Bonus Implementation/Style Fix
+### Prompt 2: Bonus Implementation/Style Fix
 You are a senior software engineer who formerly worked at DraftKings on their online casinos. You are given a slot machine webapp that runs entirely on vanilla HTML, CSS, and JavaScript. Allow players to purchase a bonus multiplier on their next spin, allow 2x,5x, and 10x multipliers, increasing the cost proportionally but not linearly for each one, ensure return to player for bonuses average 95% across a large amount of uses. Each bonus should cause extra visuals/audio to appear when spinning with the bonus active, increasing in flashiness with how much money they spend. Only modify the underlying odds and implement the bonus button/menu/visuals. Do NOT delete any visuals that already exist. Document all code to enterprise standard, and create additional unit tests to verify both the bonus and visual changes function properly.
 
 #### Follow Up Prompt 1:
@@ -135,7 +135,7 @@ Remove "Purchased multipliers use separate RTP-controlled reel odds, do not stac
 #### Follow Up Prompt 2:
 Thanks for the text removal, the color is still wrong though. match it to "Standard payline and award conditions apply"
 
-### Prompt 1: Near-Miss Visuals
+### Prompt 3: Near-Miss Visuals
 You are a senior software engineer who formerly worked at DraftKings on their online casinos. You are given a slot machine webapp that runs entirely on vanilla HTML, CSS, and JavaScript. Implement a near-
 miss feature that shows paylines that are only missing one symbol to have won. Connect the individual slot symbols with lines in the same palette as the rest of the app. These lines should only be visible
 until the next spin button is pressed. Document all code to enterprise standard, and create additional unit tests to verify the visuals do not conflict with any existing assets.
@@ -148,5 +148,11 @@ little bit higher opacity please
 
 #### Follow Up Prompt 3:
 in dark mode, the lines vary in opacity as they are between slot sections. Make sure they're consistent, and heighten the contrast to account for darker background colors
+
+### Prompt 4: Code documentation and cleanliness
+This is a slot machine web app that runs on vanilla web technology. However, we need to ensure that it meets basic software engineering standards. The code must be linted, documented, tested, and clean. Your job is the following. Make sure all source code is appropriately documented. JavaScript should use JSDocs with type annotations. Also, make sure that the code is clean. What this means is meaningful names for variables, small functions and classes, avoiding duplicate code, handling errors, modularity, and being easy to update. Testing will be done separately so don't worry about it for now. For linting, just try to address syntactic errors. Don't touch the existing logic and features except to make things cleaner and to document them.
+
+### Prompt 5: HTML and CSS Comments
+This is a slot machine web app that runs on vanilla web technology. I want you to simply go through and leave comments. The purpose of these comments is to make the code more readable for future developers. The JavaScript is mostly commented, but the HTML and CSS files aren't. Leave comments on the HTML and CSS files.
 
 
