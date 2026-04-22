@@ -1,2 +1,5 @@
+## Visual Themes - Stephanie & Dishita 
+For visual themes integration, we iterated on the color palettes and the typography. We added a dual-theme system with a light mode (brown/gold) and a dark mode (blue/black/silver color theme) while also refining font styles to improve readability and maintaining the slot-machine theme. We used prompts to standardize color and text roles, and this led to a more cohesive and flexible design without changing core functionality.
+
 ## Jargon - Maxime & Aidan
 Our implementation was quite strightforward, we needed to integrate slot machine jargon in our website. After a single prompt, the website looked more professional and tailored to slot machines. We then created some prompts to fix the layout of the website to remove unecessary space and make the text fit better together. We also used a prompt to update our README to improve readability. Throughout our portion, we used short prompts to not use tokens however after our meeting with the TA, we learned that it would have been better practice to use longer and more specific prompts.
