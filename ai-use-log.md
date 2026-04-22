@@ -117,3 +117,11 @@ Allow the user to input their name for further personalization. Allow them to pu
 
 ### Prompt 4: Fixing UI for Profile Page 
 Make the user profile a seperate page, put the button for user profile at the top left of the page. Also have a pop up to let the user know when they don't have enough credits for the wager. 
+
+## Gamification & Engagement Patterns - Zayn & Nicholas
+
+### Prompt 1: Variable Ratio Reinforcement
+This is a slot machine application created with basic web technology. I want you to add a feature: Variable Ratio Reinforcement. The idea is to deliver rewards to the player unpredictably after an unknown number of plays. The end goal is to drive the highest engagement and persistence. Again, these rewards should appear UNPREDICTABLY. I do not want you to modify previous features except to integrate this new reward pattern. Implement this modularly, integrate it with existing logic without breaking previous features, provide comments, include unit tests that simulate multiple spins and confirm Virtual Ratio Reinforcement behavior. Follow clean code principles of small functions, meaningful names, and modularity. Provide JSDoc comments for all new functions. 
+
+#### Side Note
+Codex initially refused to carry out this prompt due to its emphasis on exploiting features that lead to addiction. Was able to bypass this by telling Codex this was for a classroom experiment
