@@ -1,0 +1,210 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="A vanilla HTML, CSS, and JavaScript slot machine that roasts AI hype while you spend and win tokens."
+    />
+    <title>Token Tumbler 9000</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <main class="app-shell">
+      <section class="hero card">
+        <p class="eyebrow">Vanilla web slot machine</p>
+        <div class="hero-copy">
+          <div>
+            <h1>Token Tumbler 9000</h1>
+            <p class="hero-text">
+              Burn tokens, chase jackpots, and watch the machine explain AI with
+              the confidence of a doomed keynote.
+            </p>
+          </div>
+          <div class="hero-pill">
+            <span>Built with</span>
+            <strong>HTML + CSS + JS + browser APIs</strong>
+          </div>
+        </div>
+        <div class="hero-stats">
+          <article class="stat-card">
+            <span>Wallet</span>
+            <strong id="token-balance">0</strong>
+          </article>
+          <article class="stat-card">
+            <span>Lifetime burned</span>
+            <strong id="total-spent">0</strong>
+          </article>
+          <article class="stat-card">
+            <span>Biggest hit</span>
+            <strong id="best-win">0</strong>
+          </article>
+        </div>
+      </section>
+
+      <section class="main-grid">
+        <section class="machine card">
+          <div class="machine-top">
+            <div>
+              <p class="eyebrow">Prompt casino</p>
+              <h2>Feed the reels</h2>
+            </div>
+            <button
+              class="ghost-button"
+              id="sound-toggle"
+              type="button"
+              aria-pressed="true"
+            >
+              Sound: on
+            </button>
+          </div>
+
+          <div class="mode-strip">
+            <div>
+              <span class="mode-label">Spin cost</span>
+              <strong id="spin-cost">0</strong>
+            </div>
+            <div>
+              <span class="mode-label">Mode</span>
+              <strong id="mode-name">Dry run</strong>
+            </div>
+            <div>
+              <span class="mode-label">Total spins</span>
+              <strong id="total-spins">0</strong>
+            </div>
+          </div>
+
+          <div class="reels" id="reels">
+            <article class="reel">
+              <div class="reel-face" id="reel-0" aria-live="off">
+                <span class="reel-key">PROMPT</span>
+                <small class="reel-blurb">A politely phrased plea for competence.</small>
+              </div>
+            </article>
+            <article class="reel">
+              <div class="reel-face" id="reel-1" aria-live="off">
+                <span class="reel-key">TOKEN</span>
+                <small class="reel-blurb">A usable unit of synthetic hope.</small>
+              </div>
+            </article>
+            <article class="reel">
+              <div class="reel-face" id="reel-2" aria-live="off">
+                <span class="reel-key">GPU</span>
+                <small class="reel-blurb">The glowing rectangle that eats budgets.</small>
+              </div>
+            </article>
+          </div>
+
+          <div class="control-panel">
+            <label class="slider-label" for="hype-level">
+              Hype level
+              <span id="hype-label">Launch week</span>
+            </label>
+            <input id="hype-level" type="range" min="1" max="4" step="1" value="2" />
+            <div class="slider-scale" aria-hidden="true">
+              <span>Dry run</span>
+              <span>Launch week</span>
+              <span>Series A</span>
+              <span>VC mode</span>
+            </div>
+
+            <div class="button-row">
+              <button class="primary-button" id="spin-button" type="button">
+                Burn tokens and spin
+              </button>
+              <button class="ghost-button" id="reset-button" type="button">
+                Reset economy
+              </button>
+            </div>
+          </div>
+
+          <p class="status-line" id="status-line" aria-live="polite">
+            The machine is warmed up and ready to overpromise.
+          </p>
+        </section>
+
+        <aside class="sidebar">
+          <section class="card telemetry">
+            <p class="eyebrow">Model telemetry</p>
+            <h2>Suspicious metrics</h2>
+
+            <div class="meter-block">
+              <div class="meter-head">
+                <span>Hallucination risk</span>
+                <strong id="hallucination-value">0%</strong>
+              </div>
+              <div class="meter-track">
+                <div class="meter-fill meter-hallu" id="hallucination-meter"></div>
+              </div>
+            </div>
+
+            <div class="meter-block">
+              <div class="meter-head">
+                <span>Hype saturation</span>
+                <strong id="hype-value">0%</strong>
+              </div>
+              <div class="meter-track">
+                <div class="meter-fill meter-hype" id="hype-meter"></div>
+              </div>
+            </div>
+
+            <div class="meter-block">
+              <div class="meter-head">
+                <span>Context health</span>
+                <strong id="context-value">0%</strong>
+              </div>
+              <div class="meter-track">
+                <div class="meter-fill meter-context" id="context-meter"></div>
+              </div>
+            </div>
+          </section>
+
+          <section class="card ledger">
+            <p class="eyebrow">Token ledger</p>
+            <h2>Recent runs</h2>
+            <ul class="history-list" id="history-list"></ul>
+          </section>
+
+          <section class="card payouts">
+            <p class="eyebrow">Rigged rewards</p>
+            <h2>Payout board</h2>
+            <ul class="payout-list">
+              <li><strong>3x TOKEN</strong><span>Jackpot energy. Big payout.</span></li>
+              <li><strong>3x GPU</strong><span>Your cloud bill briefly refunds itself.</span></li>
+              <li><strong>TOKEN + PROMPT + AGENT</strong><span>Startup demo bonus.</span></li>
+              <li><strong>Any pair</strong><span>Enough traction for one optimistic thread.</span></li>
+              <li><strong>HALLU + 404</strong><span>The prize was generated, then lost.</span></li>
+            </ul>
+          </section>
+        </aside>
+      </section>
+
+      <footer class="footer-note">
+        State saves in your browser. Sound is synthesized locally. Devices that
+        support vibration get a tiny dramatic buzz.
+      </footer>
+    </main>
+
+    <dialog class="bailout-dialog" id="bailout-dialog">
+      <div class="dialog-panel">
+        <p class="eyebrow">Emergency runway</p>
+        <h2>Your token stash is empty.</h2>
+        <p>
+          The machine can offer a bailout, or you can wipe the slate clean and
+          pretend the last launch never happened.
+        </p>
+        <div class="button-row dialog-buttons">
+          <button class="primary-button" id="claim-bailout" type="button">
+            Claim 60 rescue tokens
+          </button>
+          <button class="ghost-button" id="restart-run" type="button">
+            Hard reset
+          </button>
+        </div>
+      </div>
+    </dialog>
+
+    <script src="script.js"></script>
+  </body>
+</html>
