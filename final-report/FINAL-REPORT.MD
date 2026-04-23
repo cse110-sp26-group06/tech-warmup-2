@@ -38,7 +38,7 @@ Our implementation was quite strightforward, we needed to integrate slot machine
 
 
 ## Users - Arpita & Ethan
-(add what your implementation goals were here)
+We used our research in player motivations and the different kinds of users that use a slot machine app (Casual Escapists, Dedicated Regulars, Social Connectors, VIPs, Former real-money gamblers) to add features to the app. We started with a daily bonus and a play timer for more responsible playing, then we added a profile page, and icons that you could buy. We also made it higher stakes for advanced user segments. 
 
 ### Notable features/Observations of the final model before handoff:
 - Added a profile page, local player-name persistence, unlockable/equippable icons, a shared wallet across pages, daily bonus/streak logic, play-time tracking, refill countdowns, and invite/share behavior.
